@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quick Note App</title>
+</head>
+<body>
+
+    <h1>Quick Note Application</h1>
+
+    <form method="POST">
+        <input type="text" name="note" placeholder="Write a note" required>
+        <button type="submit">Save Note</button>
+    </form>
+
+    <h2>Saved Notes</h2>
+
+    <ul>
+        {% for note in notes %}
+            <li>{{ note[1] }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
